@@ -35,7 +35,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         if (event === 'SIGNED_IN') {
           toast({
             title: "Signed in successfully",
-            description: "Welcome back to Campus Bridge",
+            description: "Welcome to Campus Bridge",
           });
         } else if (event === 'SIGNED_OUT') {
           toast({
