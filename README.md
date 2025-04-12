@@ -1,8 +1,40 @@
-# Welcome to your Lovable project
+# Welcome to our Campus bridge project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/055e27be-e47e-4214-963e-bbd12a26c10b
+**URL**: https://uni-code-pathways.vercel.app/
+
+***Selected  Domain***:
+WEB DEVELOPMENT
+
+****Problem Statement****:
+“Campus Bridge – Integrated Academic LMS + Coding 
+Skill Development Platform” 
+Objective: 
+Build a unified web application that functions as an end-to-end academic and 
+coding skill development environment for university students. The platform 
+should integrate: 
+ LMS capabilities to manage academic courses, attendance, assessments, 
+and faculty interaction. (ex: My Camu) 
+ Coding training modules with an online compiler, structured learning 
+paths, problem-solving tracks, and performance analytics just like 
+Talentio. 
+ AI Assistant: 
+1. Real-time code hints or logic debugging assistant using 
+Gemini/GPT. 
+2. Live Group Code Rooms: Students can collaboratively work 
+on coding problems (pair programming). 
+3. Job Match Recommender: Matches student portfolios with 
+mock job descriptions based on skillsets. 
+4. Smart Code Review Bot: AI-based feedback for code quality, 
+naming conventions, and best practices. 
+Core Functional Modules: 
+ Student Interface: 
+ Access academic courses, lecture materials, assignments, and attendance 
+(LMS module) 
+ Enroll in coding tracks (e.g., DSA, Web Dev, Python, Java) 
+ Practice coding questions inside a built-in code editor/compiler (support 
+multiple languages like C, C++, Python, Java)
 
 ## How can I edit this code?
 
