@@ -1,6 +1,5 @@
-
-import React, { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Navigate, useLocation } from 'react-router-dom';
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -35,8 +34,10 @@ const registerSchema = z.object({
 });
 
 const Auth = () => {
-  const { user, signIn, signUp } = useAuth();
+  const { user, loading } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+  const location = useLocation();
+  const from = (location.state as any)?.from?.pathname || '/';
   
   const loginForm = useForm<z.infer<typeof loginSchema>>({
     resolver: zodResolver(loginSchema),
@@ -54,6 +55,12 @@ const Auth = () => {
       password: "",
     },
   });
+
+  useEffect(() => {
+    console.log('Auth page:', { user, loading, location: window.location.href });
+  }, [user, loading]);
+
+  const { signIn, signUp } = useAuth();
 
   const handleLogin = async (values: z.infer<typeof loginSchema>) => {
     setIsLoading(true);
@@ -78,9 +85,9 @@ const Auth = () => {
     }
   };
 
-  // Redirect if user is already logged in
-  if (user) {
-    return <Navigate to="/" />;
+  if (user && !loading) {
+    console.log('User is logged in, redirecting to:', from);
+    return <Navigate to={from} replace />;
   }
 
   return (
